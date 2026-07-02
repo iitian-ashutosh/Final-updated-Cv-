@@ -1,0 +1,318 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{fontawesome}
+\usepackage{setspace}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=0.45cm, top=0.6cm, right=0.45cm, bottom=0.3cm}
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	centre title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{:\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1:} \hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeEXTRA}[3]{
+\vspace{0.5mm}
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}, \hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    % \vspace{-2mm}
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{Ashutosh Kumar} % Your Name
+\newcommand{\course}{B.Tech - Electronics and Electrical Engineering } 
+% Your Course
+\newcommand{\roll}{220108014} % Your Roll No.
+\newcommand{\phone}{9794301288} % Your Phone Number
+\newcommand{\emaila}{ashutosh.kmr@iitg.ac.in} %Email 1
+\newcommand{\emailb}{iitiannashutosh@gmail.com} %Email 2
+\newcommand{\github}{iitian-ashutosh} %Github
+\newcommand{\linkedin}{ashutosh-kumar-5ab5151b8} %LinkedIn
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+%----------HEADING-----------------
+\parbox{2.35cm}{%
+  \includegraphics[width=2cm,clip]{iitg_logo.jpg}
+}
+\parbox{\dimexpr\linewidth-2.8cm\relax}{
+\begin{tabularx}{\linewidth}{@{}L r@{}}
+  \textbf{\LARGE \name} & +91-\phone\\[0.5ex]
+  Roll No.: \roll & \href{mailto:\emaila}{\emaila}\\[0.5ex]
+  \course & \href{mailto:\emailb}{\emailb}\\[0.5ex]
+  Indian Institute Of Technology, Guwahati & \href{https://github.com/\github}{GitHub}\quad|\quad\href{https://www.linkedin.com/in/\linkedin/}{LinkedIn}\\
+\end{tabularx}
+}
+
+%-----------EDUCATION-----------------
+% \section{Education}
+%   \resumeSubHeadingListStart
+%     \resumeSubheading
+%       {Indian Institute of Technology Guwahati}{Guwahati, India}
+%       {Bachelor of Technology in Mathematics and Computing ;  GPA: 8.10}{July. 2015 -- July. 2019 (Expected)}
+%     \resumeSubheading
+%       {Burdwan Model School}{Burdwan, W.B}
+%       {Central Board of Secondary Education (Class XII);  Percentage: 96.60}{March. 2015}
+%   \resumeSubHeadingListEnd
+%-----------EDUCATION-----------------
+\section{Education}
+\small{\begin{tabularx}{\dimexpr\textwidth-3mm\relax}{|c|C|c|c|}
+  \hline
+  \textbf{Degree/Certificate} & \textbf{Institute/Board} & \textbf{CGPA/Percentage} & \textbf{Year}\\
+  \hline
+  B.Tech  & Indian Institute of Technology, Guwahati & 6.1  & 2022--2026\\
+  \hline
+  Senior Secondary  & CBSE Board & 84.0\% & 2022 \\
+  \hline
+  Secondary  & CBSE Board & 93.4\% & 2020 \\
+  \hline
+\end{tabularx}}
+\vspace{-1mm}
+%-----------PROJECTS-----------------
+\section{Projects}
+\resumeSubHeadingListStart
+    
+    \resumeProject
+        { Ball Balancing System using PID} %Project Name
+        {Group Project } %Project Name, Location Name
+        {Jun. 2025} %Event Dates
+        {\href{https://github.com/iitian-ashutosh/Ball-balancing-system-using-PID}{Github}}
+        % \vspace{mm}
+        \resumeItemListStart
+            \item[$\circ$] Designed and implemented an advanced ball balancing system controlled by a \textbf{PID algorithm} on \textbf{Arduino microcontroller}.
+            
+            \item[$\circ$] Utilized dual \textbf{ultrasonic sensors} with \textbf{Kalman filtering } for highly accurate distance measurement and effective noise reduction.
+             
+            \item[$\circ$] Integrated \textbf{precision servo motor actuation} to dynamically stabilise ball position on the custom balancing platform.
+            
+            \item[$\circ$]Conducted a comprehensive performance analysis by tuning \textbf{PID gains} to minimize \textbf{steady-state error}  and \textbf{overshoot}.
+        \resumeItemListEnd
+        \vspace{-1.0mm}
+
+        \resumeProject
+        { Smart Dual Axis Solar Tracking System} %Project Name
+        { Group Project} %Project Name, Location Name
+        {Jul. 2025} %Event Dates
+        {\href{https://github.com/iitian-ashutosh/Smart-Dual-Axis-Solar-Tracking-System}{Github}}
+        % \vspace{1.5mm}
+        \resumeItemListStart
+            \item[$\circ$]  Developed a dual axis solar tracking system using \textbf{Arduino Uno R3} to maximize solar panel energy efficiency.
+            \item[$\circ$] Implemented robust\textbf{LDR-based sensing mechanism}  for precise sunlight detection and automated solar panel alignment.
+            \item[$\circ$] Controlled \textbf{precision servo motors} for \textbf{real time elevation} and \textbf{azimuth} adjustments ensuring efficient \textbf{sun tracking} performance.
+             \item[$\circ$] Designed and optimized intelligent system with \textbf{tolerance-based dynamic error correction}, enhancing overall stability and tracking accuracy.
+        \resumeItemListEnd
+        \vspace{-1.0mm}
+
+        
+    \resumeProject
+    { Ultrasonic Mini Radar System} %Project Name
+        { Guide: Prof. Ashwini Sawant | EEE, IIT Guwahati} %Project Name, Location Name
+        {Apr. 2025} %Event Dates
+        {\href{https://github.com/iitian-ashutosh/Ultrasonic-Mini-Radar-System}{Github}}
+        % \vspace{1.5mm}
+        \resumeItemListStart
+            \item[$\circ$]Developed an \textbf{Ultrasonic Mini Radar System}  using Arduino with servo-based angular scanning and \textbf{real-time object tracking}.
+            \item[$\circ$] Implemented \textbf{ultrasonic sensing, LCD, serial monitor} and buzzer for accurate distance detection and  obstacle warning.
+            \item[$\circ$]Integrated RGB LED indicators with motion analysis to classify \textbf{approaching}, \textbf{moving away} or  \textbf{stationary} object.
+        \resumeItemListEnd
+        \vspace{1.5mm}
+        
+        
+     
+        \vspace{-1.0mm}
+        
+        
+  \resumeSubHeadingListEnd
+        % \vspace{-1.5mm}
+\vspace{-7mm}
+
+
+
+
+
+
+
+\section{Technical Skills}
+\vspace{0.5mm}
+\begin{tabularx}{\textwidth}{@{}p{0.45\textwidth} @{\hspace{60pt}} p{0.45\textwidth}@{}}
+    $\vcenter{\hbox{\tiny$\bullet$}}$ \textbf{Programming Languages:} C/C++ & $\vcenter{\hbox{\tiny$\bullet$}}$ \textbf{Simulation:} Tinkercad–Circuit design and simulation \\[0.5mm]
+    $\vcenter{\hbox{\tiny$\bullet$}}$ \textbf{Operating System:} Windows, MacOS & $\vcenter{\hbox{\tiny$\bullet$}}$ \textbf{Miscellaneous:} Arduino IDE \\
+\end{tabularx}
+\vspace{1.5mm}
+
+
+
+\vspace{-5mm}
+%-----------ACHIEVEMENTS-----------------
+\section{Achievements}
+\resumeSubHeadingListStart
+\resumePOR{ Government of India}
+{Official invitee to Rashtrapati Bhavan for an interactive session with the President of India.}
+{2026}
+\resumePOR{ Juspay Hiring Challenge}{Secured a place among top 500+ out of 2,00,000+ participants nationwide.}{2025}
+\resumePOR{ Meesho Dice Challenge 2.0 – Tech Track}{Achieved a rank of 215 among 2600+ participants nationwide.}{2025}
+\resumePOR{ Reliance Foundation Scholar}{ Selected among 40,000+ applicants nationwide.}{2022}
+\resumePOR{ NTSE Qualified}{ National Talent Search Examination (NCERT, New Delhi).}{2020}
+\resumePOR{ District-Level GK Competition}{ Secured Rank 1 among 2000+ participants.}{2018}
+\resumeSubHeadingListEnd
+\vspace{-5.0mm}
+\section{Key courses taken}
+\vspace{1mm}
+\resumeHeadingSkillStart
+\resumeSubItem{Electrical}
+    { Principles of Electrical Engineering, Electrical Machines, Power electronics, Electrical Power systems. }
+\vspace{-0.75mm} 
+
+
+\resumeSubItem{Electronics}
+    { Control Systems, Digital Circuits, Embedded Systems, Control and Robotics Laboratory. }
+\vspace{-0.5mm}
+
+
+ \resumeSubItem{Programming} % Category
+    { Introduction to Computing, Data Structures and Algorithms.}\\
+    \vspace{0.5mm}
+    % \hfill \textit{\footnotesize{* Lab and Theory}} 
+    \hspace{3mm}
+ \resumeHeadingSkillEnd
+ 
+
+\vspace{-5.5mm}
+
+%-----------POSITIONS OF RESPONSIBILITY-----------------
+\section{Positions of Responsibility}
+\resumeSubHeadingListStart
+
+\resumePOR{ Core Team Member}{ LitSoc – Literary Club, IIT Guwahati}{2024} \\ \vspace{3mm} {Organized literary events such as \textit{Akhar} – the annual literary fest of IITG,  and \textit{Ramcharit} – a discussion series on the Ramayana.}
+
+  \resumePOR{ City Representative}{ Technothlon, Techniche, IIT Guwahati}{2023}
+\resumeSubHeadingListEnd
+\vspace{-4mm}
+%-----------EXTRACURRICULAR ACTIVITIES-----------------
+\section{Extracurricular Activities}
+\resumeSubHeadingListStart
+ 
+\resumePOR{ Inter IIT Cultural Meet}
+    { Represented IIT Guwahati in Hindi Poetry at the 7th edition hosted by IIT Patna.}
+    { 2024}
+\resumePOR{ Alcheringa }
+    { Associate Executive, CRM team at IIT Guwahati's annual cultural fest.}
+    { 2024}
+ \resumePOR{ Manthan }
+    { Represented Brahmaputra Hostel at the Inter-Hostel Cultural Competition, IIT Guwahati.}
+    { 2023}
+
+
+%-------------------------------------------
+ \resumeSubHeadingListEnd
+\end{document}
